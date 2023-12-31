@@ -21,6 +21,7 @@ fun main() {
                 is KlassDeclaration -> {
                      println(x)
 
+
                 }
             }
 
