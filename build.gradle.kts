@@ -1,19 +1,25 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.jetbrains.kotlin.ir.backend.js.compile
 
 plugins {
     kotlin("jvm") version "1.8.21"
+    application
 }
 
 group = "org.example"
 version = "1.0-SNAPSHOT"
+
+application {
+    mainClass.set("StaticAnalyzer")
+}
 
 repositories {
     mavenCentral()
     maven("https://jitpack.io")
 }
 
-kotlin { }
+kotlin {
+
+}
 dependencies {
     testImplementation(kotlin("test"))
     implementation("com.github.drieks.antlr-kotlin:antlr-kotlin-runtime:ce9944fa0c")

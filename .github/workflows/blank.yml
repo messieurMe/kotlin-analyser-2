@@ -1,0 +1,17 @@
+name: CI
+
+on:
+    push:
+      branches: ["master"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Greet
+        run: echo Hello
+      - name: build
+        run: |
+          ./gradlew build
+          ./gradlew run
