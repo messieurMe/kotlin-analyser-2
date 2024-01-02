@@ -13,5 +13,6 @@ jobs:
         run: echo Hello
       - name: build
         run: |
+          ./gradlew wrapper
           ./gradlew build
           ./gradlew run
